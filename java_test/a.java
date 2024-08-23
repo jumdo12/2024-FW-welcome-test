@@ -2,9 +2,16 @@ package java_test;
 
 public class a {
     public static void main(String[] args) {
-
-        // 이 부분에 code를 작성해주세요!
-
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        int reversedNumber = 0;
+        while (number != 0) {
+            int digit = number % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            number /= 10;
+        }
+        System.out.println(reversedNumber);
+        scanner.close();
     }
 
 }
